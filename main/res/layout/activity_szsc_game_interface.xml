@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SZSC_game_interface">
+    <TextView
+        android:id="@+id/SZSC_game_interface_middle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/SZSC_game_player_list_Scrollview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#FFEB3B"
+        app:layout_constraintBottom_toTopOf="@id/SZSC_game_interface_middle"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/SZSC_game_interface_middle"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TableLayout
+                android:id="@+id/SZSC_game_player_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#188BE6"
+                android:orientation="vertical" />
+        </HorizontalScrollView>
+
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/SZSC_game_event_list_Scrollview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#2667E9"
+        app:layout_constraintBottom_toTopOf="@id/SZSC_game_interface_middle"
+        app:layout_constraintLeft_toRightOf="@id/SZSC_game_interface_middle"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TableLayout
+                android:id="@+id/SZSC_game_event_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#188BE6"
+                android:orientation="vertical" />
+        </HorizontalScrollView>
+
+    </ScrollView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFF00"
+        android:background="#FF0000"
+        android:id="@+id/SZSC_game_rival_blood_intro"
+        android:text="对手生命值"
+        app:layout_constraintRight_toRightOf="@id/SZSC_game_interface_middle"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/SZSC_game_rival_blood_info"
+        android:textColor="#FFFF00"
+        android:background="#FF0000"
+        android:text="9999"
+        app:layout_constraintRight_toRightOf="@id/SZSC_game_rival_blood_intro"
+        app:layout_constraintTop_toBottomOf="@id/SZSC_game_rival_blood_intro" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FF0000"
+        android:background="#FFFF00"
+        android:id="@+id/SZSC_game_rival_attack_intro"
+        android:text="对手攻"
+        app:layout_constraintLeft_toRightOf="@id/SZSC_game_interface_middle"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/SZSC_game_rival_attack_info"
+        android:textColor="#FF0000"
+        android:background="#FFFF00"
+        android:text="9999"
+        app:layout_constraintLeft_toLeftOf="@id/SZSC_game_rival_attack_intro"
+        app:layout_constraintTop_toBottomOf="@id/SZSC_game_rival_attack_intro" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FF0000"
+        android:background="#FFFF00"
+        android:id="@+id/SZSC_game_my_attack_info"
+        android:text="9999"
+        app:layout_constraintLeft_toRightOf="@id/SZSC_game_interface_middle"
+        app:layout_constraintBottom_toTopOf="@id/SZSC_game_interface_middle" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/SZSC_game_my_attack_intro"
+        android:textColor="#FF0000"
+        android:background="#FFFF00"
+        android:text="我攻"
+        app:layout_constraintLeft_toLeftOf="@id/SZSC_game_my_attack_info"
+        app:layout_constraintBottom_toTopOf="@id/SZSC_game_my_attack_info" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFF00"
+        android:background="#FF0000"
+        android:id="@+id/SZSC_game_my_blood_info"
+        android:text="9999"
+        app:layout_constraintRight_toLeftOf="@id/SZSC_game_interface_middle"
+        app:layout_constraintBottom_toTopOf="@id/SZSC_game_interface_middle" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/SZSC_game_my_blood_intro"
+        android:textColor="#FFFF00"
+        android:background="#FF0000"
+        android:text="我生命值"
+        app:layout_constraintRight_toRightOf="@id/SZSC_game_my_blood_info"
+        app:layout_constraintBottom_toTopOf="@id/SZSC_game_my_blood_info" />
+    <Button
+        android:id="@+id/SZSC_game_user_apply_end_turn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="结束回合"
+        app:layout_constraintTop_toBottomOf="@id/SZSC_game_interface_middle"
+        app:layout_constraintLeft_toRightOf="@id/SZSC_game_interface_middle"/>
+    <Button
+        android:id="@+id/SZSC_game_user_apply_surrender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="投降"
+        app:layout_constraintTop_toBottomOf="@id/SZSC_game_user_apply_end_turn"
+        app:layout_constraintLeft_toLeftOf="@id/SZSC_game_user_apply_end_turn"/>
+    <Button
+        android:id="@+id/SZSC_game_user_apply_attack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="普攻"
+        app:layout_constraintTop_toBottomOf="@id/SZSC_game_interface_middle"
+        app:layout_constraintRight_toLeftOf="@id/SZSC_game_interface_middle"/>
+    <Button
+        android:id="@+id/SZSC_game_user_apply_active_selfeffect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="自身效果"
+        app:layout_constraintTop_toBottomOf="@id/SZSC_game_user_apply_attack"
+        app:layout_constraintRight_toRightOf="@id/SZSC_game_user_apply_attack"/>
+    <Button
+        android:id="@+id/SZSC_game_user_apply_active_weapon_effect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="武器效果"
+        app:layout_constraintTop_toTopOf="@id/SZSC_game_user_apply_attack"
+        app:layout_constraintRight_toLeftOf="@id/SZSC_game_user_apply_attack"/>
+
+
+
+
+    <HorizontalScrollView
+        android:id="@+id/SZSC_game_card_list_Scrollview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#4CAF50"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/SZSC_game_user_apply_active_selfeffect">
+        <TableLayout
+            android:id="@+id/SZSC_game_card_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#188BE6"
+            android:orientation="vertical" />
+    </HorizontalScrollView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

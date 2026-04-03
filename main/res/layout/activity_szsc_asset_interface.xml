@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SZSC_asset_interface">
+
+    <TextView
+        android:id="@+id/SZSC_asset_interface_middle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/SZSC_asset_character_list_Scrollview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#E9D526"
+        app:layout_constraintBottom_toTopOf="@id/SZSC_asset_interface_middle"
+        app:layout_constraintRight_toLeftOf="@id/SZSC_asset_interface_middle"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TableLayout
+                android:id="@+id/SZSC_asset_character_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#188BE6"
+                android:orientation="vertical"/>
+        </HorizontalScrollView>
+
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/SZSC_asset_item_list_Scrollview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#E9D526"
+        app:layout_constraintBottom_toTopOf="@id/SZSC_asset_interface_middle"
+        app:layout_constraintLeft_toRightOf="@id/SZSC_asset_interface_middle"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TableLayout
+                android:id="@+id/SZSC_asset_item_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#188BE6"
+                android:orientation="vertical"
+                />
+
+        </HorizontalScrollView>
+    </ScrollView>
+    <Button
+        android:id="@+id/SZSC_Asset_user_apply_create_character"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="创建角色"
+        app:layout_constraintTop_toBottomOf="@id/SZSC_asset_interface_middle"
+        app:layout_constraintRight_toLeftOf="@id/SZSC_asset_interface_middle"/>
+    <Button
+        android:id="@+id/SZSC_Asset_user_apply_check_character"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="查看角色"
+        app:layout_constraintTop_toBottomOf="@id/SZSC_Asset_user_apply_create_character"
+        app:layout_constraintRight_toRightOf="@id/SZSC_Asset_user_apply_create_character"/>
+
+    <Button
+        android:id="@+id/SZSC_Asset_user_apply_forge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="合成"
+        app:layout_constraintTop_toBottomOf="@id/SZSC_asset_interface_middle"
+        app:layout_constraintLeft_toRightOf="@id/SZSC_asset_interface_middle"/>
+    <Button
+        android:id="@+id/SZSC_Asset_user_apply_ascent_effect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="升阶"
+        app:layout_constraintTop_toBottomOf="@id/SZSC_Asset_user_apply_forge"
+        app:layout_constraintLeft_toLeftOf="@id/SZSC_Asset_user_apply_forge"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

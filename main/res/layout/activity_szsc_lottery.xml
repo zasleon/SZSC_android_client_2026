@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SZSC_lottery">
+    <TextView
+        android:id="@+id/SZSC_lottery_middle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+    <ScrollView
+        android:id="@+id/SZSC_lottery_log_Scrollview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#E9D526"
+        app:layout_constraintBottom_toTopOf="@id/SZSC_lottery_middle"
+        app:layout_constraintLeft_toRightOf="@id/SZSC_lottery_middle"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        <TableLayout
+            android:id="@+id/SZSC_lottery_log"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <!-- 这里可以添加子视图 -->
+        </TableLayout>
+        </HorizontalScrollView>
+    </ScrollView>
+    <Button
+        android:id="@+id/SZSC_apply_lottery_order_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="单抽"
+        app:layout_constraintTop_toBottomOf="@id/SZSC_lottery_middle"
+        app:layout_constraintRight_toLeftOf="@id/SZSC_lottery_middle"/>
+
+
+    <Button
+        android:id="@+id/SZSC_apply_lottery_order_10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10连抽"
+        app:layout_constraintTop_toBottomOf="@id/SZSC_lottery_middle"
+        app:layout_constraintLeft_toRightOf="@id/SZSC_lottery_middle"/>
+
+    <TextView
+        android:id="@+id/SZSC_lottery_diamonds_remain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="钻石余额"
+        app:layout_constraintBottom_toBottomOf="@id/SZSC_lottery_middle"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="@id/SZSC_apply_lottery_order_1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
